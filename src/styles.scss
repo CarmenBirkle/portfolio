@@ -43,6 +43,10 @@ h2{
     font-size: 2.8125rem;
     font-size: clamp(2.8125rem, 2.0089285714285716rem + 4.017857142857142vw, 5.625rem);
 }
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* poppins-regular - latin */
 @font-face {
   font-display: swap;
