@@ -12,7 +12,7 @@
 
 
 <section class="slide-out" 
-*ngIf="isMenuOpen"
+[ngClass]="{ 'open': isMenuOpen, 'closed': !isMenuOpen }"
 >
    <li><a href="#about" translate>About me</a></li>
    <li><a href="#skills" translate>Skills</a></li>

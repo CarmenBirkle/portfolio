@@ -12,8 +12,6 @@ export class MobileNavComponent {
   isMenuOpen = false;
 
   toggleMenu() {
-    console.log(this.isMenuOpen);
-    this.isMenuOpen = !this.isMenuOpen;
-      console.log(this.isMenuOpen);
+      this.isMenuOpen = !this.isMenuOpen;
   }
 }
