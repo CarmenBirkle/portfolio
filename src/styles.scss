@@ -1,15 +1,36 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background:#141D2F;
+$dark-blue:#4B47FF;
+$blue: #00BEE8;
+$green:#1CE6B6; // ev. wieder löschen
+$grey: #141D2F 80%;
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
-body{
+html, body{
     font-family: 'Poppins', sans-serif;
+    background-color: $background;
+    color: white;
+    height:100%;
+    width: 100%;
+    text-align: center; // TODO ggf. raus, schauen wie das wirkt
+}
+section {
+    min-height: 100%;
+    width:100%
+}
+
+a{
+    text-decoration: none;
 }
 /* poppins-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -19,4 +40,19 @@ body{
        url('assets/fonts/poppins-v20-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
        url('assets/fonts/poppins-v20-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
     //    url('assets/fonts/poppins-v20-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+
+
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/poppins-v20-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/poppins-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('assets/fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('assets/fonts/poppins-v20-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('assets/fonts/poppins-v20-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    //    url('assets/fonts/poppins-v20-latin-700.svg#Poppins') format('svg'); /* Legacy iOS */
 }

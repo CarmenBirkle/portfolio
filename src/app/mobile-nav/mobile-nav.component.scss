@@ -1,0 +1,9 @@
+.slide-out{
+    background-color: cornflowerblue;
+    width:100%;
+    height: 100%;
+    z-index:50;
+     @media(min-width: 600px) {
+        display: none;
+    }
+}
