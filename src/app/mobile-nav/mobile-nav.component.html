@@ -2,18 +2,19 @@
   <div class="burger" [ngClass]="{'open': isMenuOpen}"></div>
 </div>
 
-<section class="slide-out" 
+<div class="slide-out" 
 [ngClass]="{ 'open': isMenuOpen, 'closed': !isMenuOpen }"
 >
-   <li><a href="#about" (click)="toggleMenu()" translate>About me</a></li>
-   <li><a href="#skills" (click)="toggleMenu()" translate>Skills</a></li>
-   <li><a href="#portfolio" (click)="toggleMenu()" translate>Portfolio</a></li>
-   <li><a href="#contact" (click)="toggleMenu()" translate>Contact</a></li>
-   <li>
-<img class="lang-icon" 
-       (click)="pagesBehaviorService.toggleLanguage()" 
-       [src]="pagesBehaviorService.flagPicture" 
-       alt="{{ pagesBehaviorService.language }}">
-   </li>
-   
-</section>
+    <div>
+        <li><a href="#about" (click)="toggleMenu()" translate>About me</a></li>
+        <li><a href="#skills" (click)="toggleMenu()" translate>Skills</a></li>
+        <li><a href="#portfolio" (click)="toggleMenu()" translate>Portfolio</a></li>
+        <li><a href="#contact" (click)="toggleMenu()" translate>Contact</a></li>
+        <li>
+        <img class="lang-icon" 
+            (click)="pagesBehaviorService.toggleLanguage()" 
+            [src]="pagesBehaviorService.flagPicture" 
+            alt="{{ pagesBehaviorService.language }}">
+        </li>
+    </div>
+</div>

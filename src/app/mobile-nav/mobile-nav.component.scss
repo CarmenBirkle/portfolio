@@ -1,6 +1,6 @@
 @use 'src/styles' as g;
 
-// hamburger-menue-classes
+// hamburger-menu-classes
 
 .burger-container {
   width: 50px;  
@@ -21,14 +21,14 @@
 .burger {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: g.$font-white;
   position: relative;
   border-radius: 2px;
 }
 
 .burger::before, .burger::after {
   content: '';
-  background-color: white;
+  background-color: g.$font-white;
   width: 100%;
   height: 3px;
   position: absolute;
@@ -57,12 +57,20 @@
   transform: translateY(-10px) rotate(-45deg);
 }
 
-// mobile-menue-links
+// mobile-menu-links
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 li{
     list-style-type: none;
-    margin-bottom: 33px;
+    font-size: 23px;
+    text-align: left;
 }
+
  .lang-icon{
     width: clamp(40px, 4vw, 50px);
     height: clamp(40px, 4vw, 50px);
@@ -71,21 +79,19 @@ li{
     object-fit: contain;
     }
 
-
-
-//     //TODO Main page scroll entfernen wenn menü angezeigt wird
-
-
 .slide-out {
   position: fixed;
-  margin-top:75px;
   top: 0;
+  margin-top:75px;
   right: 0;
   background-color: g.$grey;
   width: 100%;
   height: 100%;
   overflow: hidden;
   z-index: 50;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   transform: translateX(100%);
   transition: transform 0.6s ease-out;
   
@@ -99,6 +105,14 @@ li{
 
   &.closed {
     transform: translateX(100%);
+  }
+  div{
+  width:119px;
+  position: relative;
+  transform: translateY(-50%);
+  display:flex;
+  flex-direction: column;
+  gap:33px;
   }
 }
 
@@ -118,7 +132,7 @@ li{
 
 .slide-out.open li {
   opacity:0;
-    animation: slide-in-right 0.7s ease-out forwards;
+    animation: slide-in-right 0.7s  forwards;
   
 
   &:nth-child(1) {

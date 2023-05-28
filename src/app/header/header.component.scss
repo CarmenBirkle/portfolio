@@ -20,6 +20,13 @@ nav{
       @media(max-width: 600px) {
         display: none;
     }
+    a{
+        font-size: clamp(1.25rem, 1.1161rem + 0.3571vw, 1.4375rem);
+      &:hover{
+        color:g.$blue
+      }
+    }
+   
 }
 
 .logo{

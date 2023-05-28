@@ -1,3 +1,4 @@
+$font-white: white;
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 $background:#141D2F;
@@ -22,6 +23,8 @@ html, body{
     scroll-behavior: smooth;
     text-align: center; // TODO ggf. raus, schauen wie das wirkt
     line-height: 120%;
+    font-size: 16px;
+    font-weight: 400;
 }
 section {
     min-height: 100%;
@@ -36,13 +39,33 @@ a{
 }
 
 h1{
-
+    font-weight: 700;
+    font-size: 2.8125rem;
+    font-size: clamp(2.8125rem, 2.0089285714285716rem + 4.017857142857142vw, 5.625rem);
 }
+
 h2{
     font-weight: 700;
     font-size: 2.8125rem;
     font-size: clamp(2.8125rem, 2.0089285714285716rem + 4.017857142857142vw, 5.625rem);
 }
+
+h3{
+    font-size: clamp(1.8125rem, 1.2946rem + 2.5893vw, 3.625rem);
+    color: $dark-blue;
+}
+
+h4{
+    font-size: clamp(2rem, 1.4286rem + 2.8571vw, 4rem);
+}
+h5{
+    font-size:23px;
+}
+h6{
+    font-size: 32px;
+    color:$dark-blue
+}
+
 body.no-scroll {
   overflow: hidden;
 }
