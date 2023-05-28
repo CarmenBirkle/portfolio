@@ -1,34 +1,27 @@
 
-<!-- <div class="burger-container" (click)="toggleMenu()">
-    <div class="burger" 
-        [ngClass]="{'open': isMenuOpen}">
-    </div>
-</div> -->
-
-
-    <div class="burger" 
+<!-- // hatte funktioniert -->
+    <!-- <div class="burger" 
     (click)="toggleMenu()"
         [ngClass]="{'open': isMenuOpen}">
-    </div>
+    </div> -->
+
+<div class="burger-container" (click)="toggleMenu()">
+  <div class="burger" [ngClass]="{'open': isMenuOpen}"></div>
+</div>
 
 
 
-
-
-
-
-<section class="slide-out">
-   <li> <a href="#about" translate>About me</a></li>
+<section class="slide-out" 
+*ngIf="isMenuOpen"
+>
+   <li><a href="#about" translate>About me</a></li>
    <li><a href="#skills" translate>Skills</a></li>
    <li><a href="#portfolio" translate>Portfolio</a></li>
    <li><a href="#contact" translate>Contact</a></li>
-   <!-- <li><img class="lang-icon" (click)="header.toggleLanguage()" [src]="flagPicture" alt="{{ language }}"></li> -->
-            <img class="lang-icon" 
-        (click)="pagesBehaviorService.toggleLanguage()" 
-            [src]="pagesBehaviorService.flagPicture" 
-            alt="{{ pagesBehaviorService.language }}">
-
-
+   <img class="lang-icon" 
+       (click)="pagesBehaviorService.toggleLanguage()" 
+       [src]="pagesBehaviorService.flagPicture" 
+       alt="{{ pagesBehaviorService.language }}">
 </section>
 
 <!-- TODO über den header legen -->

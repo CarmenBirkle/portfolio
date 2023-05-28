@@ -1,51 +1,41 @@
-// .burger-line{
-//     width:30px;
-//     height: 2px;
-//     background: white;
-//     display:block;
-// }
+@use 'src/styles' as g;
 
-// .burger-container{
-//     cursor: pointer;
-//     position: absolute;
-//     top: 40px;
-//     right: 10px;
-//     height: 40px;
-//     width: 40px;
-// }
+// hamburger-menue-classes
+
+.burger-container {
+  width: 50px;  
+  height: 50px; 
+  position: fixed;
+  top: 15px; 
+  right: 25px; 
+  cursor: pointer;
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media(min-width: 600px) {
+        display: none;
+    }
+}
 
 .burger {
   width: 30px;
   height: 3px;
-  background-color: black;
-  position: absolute;
-  top: 40px; // TODO noch ändern
-  right: 10px;
-    cursor: pointer;
-    z-index:55;
-    border-radius: 2px;
-    padding:10px;
-    box-sizing: border-box;
-    //  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  background-color: white;
+  position: relative;
+  border-radius: 2px;
 }
-
-
 
 .burger::before, .burger::after {
   content: '';
-  background-color: black;
+  background-color: white;
   width: 100%;
   height: 3px;
   position: absolute;
   left: 0;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
-
-.burger, .burger::before, .burger::after {
-border-radius: 5px;
-    transition: all 0.3s ease;  /* Hier ist die neue Eigenschaft */
-}
-
 
 .burger::before {
   top: -10px;
@@ -67,7 +57,7 @@ border-radius: 5px;
   transform: translateY(-10px) rotate(-45deg);
 }
 
-
+// mobile-menue-links
 
 li{
     list-style-type: none;
@@ -85,27 +75,15 @@ li{
     position:fixed;
     top: 0;
     // right: -100%;
-    background-color: cornflowerblue;
+    background-color: g.$grey;
     width:100%;
     height: 100%;
     overflow:hidden;
     z-index:50;
     transition: right 0.6s;
-     @media(min-width: 600px) {
+    @media(min-width: 600px) {
         display: none;
     }
 
     //TODO Main page scroll entfernen wenn menü angezeigt wird
-}
-.burger-btn{
-    position:fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    z-index: 60;
-    height: 100px;
-    width: 50%;
-    background-color: brown;
-
 }
