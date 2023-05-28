@@ -6,4 +6,31 @@ nav{
     top:0;
     left:0;
     width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+
 }
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap:clamp(20px, 2vw, 30px);
+      @media(max-width: 600px) {
+        display: none;
+    }
+}
+
+.logo{
+    width:120px;
+    cursor: pointer;
+    object-fit: contain;
+}
+// min-size ,viewpoint (1 vw = 1% ) - max-size 
+ .lang-icon{
+    width: clamp(40px, 4vw, 50px);
+    height: clamp(40px, 4vw, 50px);
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: contain;
+    }
