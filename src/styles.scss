@@ -6,6 +6,7 @@ $blue: #00BEE8;
 $green:#1CE6B6; // ev. wieder löschen
 $grey: rgba(20, 29, 47, 0.8);
 
+
 *{
     margin:0;
     padding:0;
@@ -20,6 +21,7 @@ html, body{
     width: 100%;
     scroll-behavior: smooth;
     text-align: center; // TODO ggf. raus, schauen wie das wirkt
+    line-height: 120%;
 }
 section {
     min-height: 100%;
@@ -31,6 +33,15 @@ section {
 a{
     text-decoration: none;
     color: white;
+}
+
+h1{
+
+}
+h2{
+    font-weight: 700;
+    font-size: 2.8125rem;
+    font-size: clamp(2.8125rem, 2.0089285714285716rem + 4.017857142857142vw, 5.625rem);
 }
 /* poppins-regular - latin */
 @font-face {

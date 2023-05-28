@@ -71,24 +71,14 @@ li{
     object-fit: contain;
     }
 
-// .slide-out{
-//     position:fixed;
-//     top: 0;
-//     background-color: g.$grey;
-//     width:100%;
-//     height: 100%;
-//     overflow:hidden;
-//     z-index:50;
- 
-//     @media(min-width: 600px) {
-//         display: none;
-//     }
+
 
 //     //TODO Main page scroll entfernen wenn menü angezeigt wird
-// }
+
 
 .slide-out {
   position: fixed;
+  margin-top:75px;
   top: 0;
   right: 0;
   background-color: g.$grey;
@@ -112,17 +102,6 @@ li{
   }
 }
 
-// @keyframes slide-in-right {
-//   from {
-//     transform: translateX(100%);
-//     opacity: 0;
-//   }
-//   to {
-//     transform: translateX(0);
-//     opacity: 1;
-//   }
-// }
-
 @keyframes slide-in-right {
   0% {
     transform: translateX(100%);
@@ -136,7 +115,6 @@ li{
     opacity: 1;
   }
 }
-
 
 .slide-out.open li {
   opacity:0;
@@ -157,6 +135,9 @@ li{
 
   &:nth-child(4) {
     animation-delay: 0.4s;
+  }
+  &:nth-child(5) {
+    animation-delay: 0.5s;
   }
 }
 

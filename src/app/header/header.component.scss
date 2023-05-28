@@ -1,6 +1,7 @@
+@use 'src/styles' as g;
 nav{
     height: 80px;
-    background-color: rgb(255, 0, 242);
+    background-color: g.$background;
     position: fixed;
     z-index:1;
     top:0;
@@ -10,9 +11,9 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0 10% 0 10%;
-
 }
-.nav-left{
+
+  .nav-left{
     display: flex;
     align-items: center;
     gap:clamp(20px, 2vw, 30px);
@@ -25,6 +26,7 @@ nav{
     width:120px;
     cursor: pointer;
     object-fit: contain;
+    z-index:60;
 }
 // min-size ,viewpoint (1 vw = 1% ) - max-size 
  .lang-icon{
