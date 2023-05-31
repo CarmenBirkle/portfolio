@@ -20,14 +20,30 @@ nav{
       @media(max-width: 600px) {
         display: none;
     }
+}
     a{
         font-size: clamp(1.25rem, 1.1161rem + 0.3571vw, 1.4375rem);
-      &:hover{
-        color:g.$blue
-      }
+        position:relative;
+      
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0px;
+            width: 0;
+            height: 2px;
+            border-radius: 5px;
+            background-color: rgb(75, 71, 255);
+            transition: all 125ms ease-in-out;
+        } 
+        &:hover{
+          color:g.$blue;
+
+          &:after {
+                width: 40%;
+            }
+        }
     }
-   
-}
 
 .logo{
     width:120px;
