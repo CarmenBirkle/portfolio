@@ -2,11 +2,9 @@
 
 section{
     height: 100%;
-    padding-top:150px;
-   
-    
+    padding-top:80px; 
 }
-// hier neue klassen
+
 .profile-container{
     position:relative
 }
@@ -20,7 +18,6 @@ section{
 
 .vector-mobile{
     position: absolute;
-    // top: clamp(250px, 161.11111111111111px + 27.77777777777778vw, 425px);
     z-index: 2;
     top: clamp(234px, 104.111111px + 26.777778vw, 950px);
     width: 100%;
@@ -31,7 +28,6 @@ section{
 }
 
 .main-profile-picture {
-    // height: clamp(20.625rem, 12.053571428571429rem + 42.857142857142854vw, 28.125rem);
     position:relative;
     z-index: 1;
     margin-top: clamp(0rem, 1.9791666666666665rem + -3.3333333333333335vw, 1.3125rem);
@@ -47,28 +43,20 @@ section{
     align-items: center;
     padding-left:1.6 rem; // aktuell für kleinste Ansicht (mobile) 320 px
     z-index: 3;
+    margin-top: clamp(0rem, 2.8288950715421306rem + -4.769475357710652vw, 1.875rem);
 
     h1, h3, h4{
         z-index:15;
     }
+
     h1{
        padding-top: 1.25rem;
-    //    padding-top:1.438 rem;
        padding-left:40px;
-        // padding-top: clamp(2.5625rem, 1.4196428571428572rem + 5.714285714285714vw, 4.8125rem);
-
-        // @media (min-width: 850px) and (max-width: 949px) {
-        //   padding-top: clamp(0rem, 11.875rem + -20vw, 1.25rem);
-        // }
     }
+
     h3{
         padding-left:40px;
     }
-    // h4{
-    //     // padding-top: clamp(2.5625rem, 1.4196428571428572rem + 5.714285714285714vw, 4.8125rem);
-             
-    //     top: clamp(4.8125rem, 4.144773449920509rem + 3.338632750397456vw, 6.125rem);
-    // }
 }
 
 .rotate {
@@ -79,6 +67,11 @@ section{
     left: clamp(3.3125rem, -2.410870429252782rem + 28.61685214626391vw, 14.5625rem);
 }
 
+.german-h4{
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.5548489666136724rem + 2.2257551669316378vw, 1.875rem);
+    margin-top: clamp(0rem, 0.4714825119236884rem + -0.7949125596184421vw, 0.3125rem);
+}
 
 
 
@@ -98,11 +91,10 @@ section{
     background-image: url('^assets/img/background/back2elements.svg');
     position:absolute;
     left:-120px;
-    widtH:688px; // erstmal unten noch berechnen per clamp
+    widtH:688px; 
     background-size: cover;
     background-repeat: no-repeat;
     z-index:999;
-    // width: clamp(200px, 173.68421052631578px + 8.223684210526317vw, 300px);
     height: 600px;
     top:0;
 
@@ -111,30 +103,23 @@ section{
 .get-in-contact{
     position:absolute; 
     bottom:1rem;
-    // margin-left: 6.625rem;
     width:100%;
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap:42px;
     align-items: center;
     z-index:2;
 }
 
 .icon{
-    
-            img{
-                width:30px;
-                &:hover{
-                 transform: scale(1.33) !important;   
-                }
-            }
+    img{
+        width:30px;
+        &:hover{
+        transform: scale(1.33) !important;   
         }
+    }
+}
 
-// .icon::before{
-//     width: 30px;
-//     height: 3px;
-//     background-color: g.$blue;
-// }
 
  .email {
     display: none;
@@ -148,8 +133,7 @@ section{
 
 
 .line{
-    // width: clamp(64px, 4vw, 120px);
-    width: clamp(64px, 10vw, 950px);
+    width: clamp(1.75rem, 0.6053259141494436rem + 5.723370429252783vw, 4rem);
     border: 3px solid g.$dark-blue;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -157,43 +141,6 @@ section{
     bottom:1.9rem;
     z-index: 2;
 }
-
-// .get-in-Contact {
-//     display: flex;
-//     // gap:40px;
-//     // align-items: center;
-//     position: relative;
-//     z-index: 60;
-
-//     .contact{
-//         width:50%;
-//         display:flex;
-//         align-items: center;
-//         gap:40px;
-//     }
-
-//     .icon img {
-//         width: 30px;
-//         height: 30px;
-//         transition: transform 0.3s ease-in-out;  
-//     }
-
-    
-//      a &:hover {
-//             scale: 1.2;
-//             transition: all 125ms ease-in-out;
-//         }
-
-
-// .email {}:hover{
-//           color:g.$blue;
-
-  
-      
-// }
-
-
-
 
 
 
@@ -206,22 +153,16 @@ button{
     position: relative;
     z-index: 1;
     display: block;
-    // background-color: transparent;
-    // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    // border-radius: 10px;
     width: -moz-fit-content;
     width: fit-content;
-    // padding: 15px 30px;
     gap: 10px;
     border: none;
     font-size: clamp(1.125rem, 1.0427631579rem + 0.4111842105vw, 1.4375rem);
     line-height: 120%;
     color: white;
     cursor: pointer;
-    margin-top: 50px;
-    margin-left: 255px;
     text-decoration: none;
-
+    margin-top:25px;
 }
 
 .vector{
@@ -232,7 +173,6 @@ button{
     @media (max-width: 950px) {
         display: none;
     }
-        
 }
 
 

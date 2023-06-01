@@ -1,11 +1,11 @@
 <nav>
     <div>
-        <img class="logo" (click)="pagesBehaviorService.scrollToTop()" src="assets/img/personal/platzhalterLogo.png" alt="Carmen Birkle">
+        <img class="logo" (click)="pagesBehaviorService.scrollToTop()" src="assets/img/personal/logo.png" alt="Carmen Birkle">
     </div>
     <div class="nav-left">
-        <a href="#about" translate>About me</a>
-        <a href="#skills" translate>Skills</a>
-        <a href="#portfolio" translate>Portfolio</a>
+        <a [ngClass]="{'a-german': pagesBehaviorService.german}" href="#about" translate>About me</a>
+        <a [ngClass]="{'a-german': pagesBehaviorService.german}" href="#skills" translate>Skills</a>
+        <a [ngClass]="{'a-german': pagesBehaviorService.german}" href="#portfolio" translate>Portfolio</a>
         <img class="lang-icon" 
             (click)="pagesBehaviorService.toggleLanguage()" 
             [src]="pagesBehaviorService.flagPicture" 

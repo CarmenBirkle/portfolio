@@ -14,6 +14,6 @@ export class HeaderComponent {
   flagPicture = 'assets/img/icons/german.png';
 
 constructor(public pagesBehaviorService: PagesBehaviorService,) {}
-
-
 }
+
+

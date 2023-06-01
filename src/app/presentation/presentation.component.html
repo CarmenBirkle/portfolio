@@ -8,21 +8,24 @@
 
     
     <div class="intro">
-        <h4 class="rotate">I am</h4>
-        <h1>Carmen Birkle</h1>
-        <h3>Frontend Developer</h3>
+       <h4 class="rotate" [ngClass]="{'german-h4': shouldAddGermanClass}" translate>I am</h4>
+
+
+        <h1 translate>Carmen Birkle</h1>
+        <h3 translate>Frontend Developer</h3>
+        <button translate>Lets Talk</button>
     </div>
 
     <div class="line"></div>
     <div class="get-in-contact">
         <a class="icon" href="https://github.com/CarmenBirkle">
-            <img src="assets/img/icons/github.svg" alt="GitHub" title="GitHub"target="_blank">
+            <img src="assets/img/icons/github.svg" alt="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
         </a>
         <a class="icon" href="mailto: birkle@carmenbirkle.de">
-            <img src="assets/img/icons/mail.svg" alt="E-Mail" title="Send E-Mail"srcset="">
+            <img src="assets/img/icons/mail.svg" alt="E-Mail" title="Send E-Mail" srcset="">
         </a>
         <a class="icon" href="https://www.linkedin.com/in/carmenbirkle/">
-            <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" target="_blank">
+            <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
         </a>
         <a class="email" href="mailto: birkle@carmenbirkle.de" title="Send E-Mail" >birkle@carmenbirkle.de</a>
     </div>
