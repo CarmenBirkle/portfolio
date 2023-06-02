@@ -47,6 +47,11 @@ h1{
     font-size: 1.875rem;
     font-size: clamp(1.875rem, 0.8035714285714286rem + 5.357142857142857vw, 5.625rem);
     margin-bottom: clamp(0.9375rem, 0.1339285714285715rem + 4.017857142857142vw, 3.75rem);
+    @media (min-width: 950px) {
+        font-size: 3rem;
+        font-size: clamp(3rem, 0.2596153846153846rem + 4.615384615384616vw, 5.625rem);
+    }
+    
 }
 
 h2{
@@ -61,11 +66,16 @@ h3{
     color: $dark-blue;
     text-transform: uppercase;
     font-weight: 400;
+    @media (min-width: 950px) {
+        font-size: 2.0625rem;
+        font-size: clamp(2.0625rem, 0.43131868131868134rem + 2.7472527472527473vw, 3.625rem);
+    }
+    
 }
 
 h4{
     font-size: 1.25rem;
-font-size: clamp(1.25rem, 0.4642857142857143rem + 3.9285714285714284vw, 4rem);
+    font-size: clamp(1.25rem, 0.4642857142857143rem + 3.9285714285714284vw, 4rem);
     font-weight: 400;
 }
 h5{

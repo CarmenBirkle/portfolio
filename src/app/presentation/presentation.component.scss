@@ -5,6 +5,18 @@ section{
     padding-top:80px; 
 }
 
+
+      @media (min-width: 950px) {
+        .main-container{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 10% 0 10%;
+                align-items: center;
+        }
+    }
+
+
+
 .profile-container{
     position:relative
 }
@@ -27,13 +39,31 @@ section{
     }
 }
 
-.main-profile-picture {
+.main-profile-picture-mobile {
     position:relative;
     z-index: 1;
     margin-top: clamp(0rem, 1.9791666666666665rem + -3.3333333333333335vw, 1.3125rem);
     width: clamp(224px, 125.4603174603px + 30.7936507937vw, 418px);
+    @media (min-width: 950px) {
+        display: none;
+}
 }
 
+.main-profile-picture-desktop {
+    position:relative;
+    z-index: 1;
+  ;
+    margin-top: clamp(1.4375rem, 13.190247252747252rem + -10.10989010989011vw, 7.1875rem);
+    // margin-top: clamp(0rem, 1.9791666666666665rem + -3.3333333333333335vw, 1.3125rem);
+    // width:500px; // maximal 1860px
+   
+    width: clamp(24rem, 15.517857142857144rem + 14.285714285714285vw, 32.125rem);
+    //TODO width nochmals berechnen für desktop
+    // width: clamp(224px, 125.4603174603px + 30.7936507937vw, 418px);
+    @media (max-width: 950px) {
+        display: none;
+}
+}
 
 
 .intro{
@@ -52,11 +82,18 @@ section{
     h1{
        padding-top: 1.25rem;
        padding-left:40px;
+       @media (min-width: 950px) {
+            padding-left: clamp(1.25rem, -0.05494505494505475rem + 2.1978021978021975vw, 2.5rem);
+        }
     }
 
     h3{
         padding-left:40px;
+        @media (min-width: 950px) {
+            padding-left: clamp(1.25rem, -0.05494505494505475rem + 2.1978021978021975vw, 2.5rem);
+        }
     }
+
 }
 
 .rotate {
@@ -71,19 +108,6 @@ section{
     font-size: 1rem;
     font-size: clamp(1rem, 0.5548489666136724rem + 2.2257551669316378vw, 1.875rem);
     margin-top: clamp(0rem, 0.4714825119236884rem + -0.7949125596184421vw, 0.3125rem);
-}
-
-
-
-.main-container{
-    display: flex;
-    justify-content: space-between;
-          padding: 0 10% 0 10%;
-
-    img{
-        width:32vw;
-    
-    }
 }
 
 .background{
@@ -168,8 +192,11 @@ button{
 .vector{
     position: absolute;
     width: calc(100vw - 10px);
-    top:clamp(28%, 17.730375426621166px + 10.238907849829351vw, 28%);
+   
+    top: clamp(0.5rem, 33.71428571428571rem + -28.57142857142857vw, 16.75rem);
+    // top:clamp(28%, 17.730375426621166px + 10.238907849829351vw, 28%);
     left:0;
+    z-index:2;
     @media (max-width: 950px) {
         display: none;
     }
