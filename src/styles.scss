@@ -10,7 +10,7 @@ $grey: rgba(20, 29, 47, 0.8);
 
 *{
     margin:0;
-    padding:0;
+    padding:0; 
     box-sizing: border-box;
 }
 
@@ -50,14 +50,23 @@ h1{
     @media (min-width: 950px) {
         font-size: 3rem;
         font-size: clamp(3rem, 0.2596153846153846rem + 4.615384615384616vw, 5.625rem);
+        
     }
     
 }
 
 h2{
     font-weight: 700;
-    font-size: 2.8125rem;
-    font-size: clamp(2.8125rem, 2.0089285714285716rem + 4.017857142857142vw, 5.625rem);
+    font-size: clamp(1.875rem, 0.8035714285714286rem + 5.357142857142857vw, 5.625rem);
+    margin-bottom: clamp(0.9375rem, 0.1339285714285715rem + 4.017857142857142vw, 3.75rem);
+    // font-size: 2.8125rem;
+    // font-size: clamp(2.8125rem, 2.0089285714285716rem + 4.017857142857142vw, 5.625rem);
+    padding: 2rem 0rem;
+    @media (min-width: 950px) {
+        font-size: 3rem;
+        font-size: clamp(3rem, 0.2596153846153846rem + 4.615384615384616vw, 5.625rem);
+        
+    }
 }
 
 h3{

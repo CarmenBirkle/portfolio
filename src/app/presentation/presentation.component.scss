@@ -132,6 +132,9 @@ section{
     gap:42px;
     align-items: center;
     z-index:2;
+    @media (min-width: 950px) {
+            bottom: 2rem;
+         }    
 }
 
 .icon{
@@ -154,13 +157,19 @@ section{
 }
     
 .line{
-    width: clamp(1.75rem, 0.6053259141494436rem + 5.723370429252783vw, 4rem);
+ 
+    width: clamp(1.5625rem, 0.6101190476190477rem + 4.761904761904762vw, 3.4375rem);
+    // width: clamp(1.75rem, 0.6053259141494436rem + 5.723370429252783vw, 4rem);
     border: 3px solid g.$dark-blue;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     position: absolute;
-    bottom:1.9rem;
+    bottom:2rem;
     z-index: 2;
+       @media (min-width: 950px) {
+            bottom: 3rem;
+            width: clamp(3.4375rem, -2.4347527472527473rem + 9.89010989010989vw, 9.0625rem);
+         } 
 }
 
 
@@ -203,7 +212,7 @@ button{
     position:absolute;
     bottom:5.7rem;
     right: 10%;
-    z-index: 4;
+    z-index: 21;
     display:flex;
     gap:1.063rem;
     @media (max-width: 950px) {
@@ -231,7 +240,7 @@ button{
 .background-purple {
     position: absolute;
     right: 0;
-    top:720%;
+    top:72%;
     background-image: url('^assets/img/background/purple-shadow.png');
     background-repeat: no-repeat;
     background-size: cover;
