@@ -105,6 +105,33 @@ body.no-scroll {
   overflow: hidden;
 }
 
+button{
+    padding: 15px 30px;
+    background-color: $blue;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 10px;
+    border: none;
+    font-size: clamp(1.125rem, 1.0427631579rem + 0.4111842105vw, 1.4375rem);
+    line-height: 120%;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top:44px;
+    &:hover{
+        background-color: $dark-blue;
+       
+    transform: scaleX(1.1) scaleY(1.1);
+    }
+}
+
+
+
 /* Firefox */
 * {
   scrollbar-width: thin;
