@@ -54,6 +54,9 @@ nav{
     cursor: pointer;
     object-fit: contain;
     z-index:60;
+    @media(max-width: 680px) {
+        height: clamp(2.5rem, 0.6395348837209303rem + 9.30232558139535vw, 6.25rem);
+    }
 }
 // min-size ,viewpoint (1 vw = 1% ) - max-size 
  .lang-icon{

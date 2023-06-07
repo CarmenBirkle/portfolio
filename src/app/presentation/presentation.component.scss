@@ -6,7 +6,7 @@ section{
 }
 
 
-      @media (min-width: 950px) {
+      @media (min-width: 951px) {
         .main-container{
                 display: flex;
                 justify-content: space-between;
@@ -37,7 +37,7 @@ section{
     top: clamp(234px, 104.111111px + 26.777778vw, 950px);
     width: 100%;
     left:0;
-    @media (min-width: 950px) {
+    @media (min-width: 951px) {
         display: none;
     }
 }
@@ -47,7 +47,7 @@ section{
     z-index: 1;
     margin-top: clamp(0rem, 1.9791666666666665rem + -3.3333333333333335vw, 1.3125rem);
     width: clamp(224px, 125.4603174603px + 30.7936507937vw, 418px);
-    @media (min-width: 950px) {
+    @media (min-width: 951px) {
         display: none;
 }
 }
@@ -79,17 +79,28 @@ section{
     h1{
        padding-top: 1.25rem;
        padding-left:40px;
-       @media (min-width: 950px) {
+       @media (min-width: 951px) {
             padding-left:unset;
             margin-left: clamp(1.25rem, -0.05494505494505475rem + 2.1978021978021975vw, 2.5rem);
         }
+        @media (min-width: 951px) and (max-width: 965px)  {
+            padding-left:unset;
+            font-size: 2.5rem;
+            font-size: clamp(2.5rem, -29.166666666666668rem + 53.333333333333336vw, 3rem);
+        }
+
+
     }
 
     h3{
         padding-left:40px;
-        @media (min-width: 950px) {
+        @media (min-width: 951px) {
             padding-left:unset;
             margin-left: clamp(1.25rem, -0.05494505494505475rem + 2.1978021978021975vw, 2.5rem);
+        }
+         @media (min-width: 951px) and (max-width: 965px)  {
+            padding-left:unset;
+            font-size: 2rem;
         }
     }
 }
@@ -100,7 +111,7 @@ section{
     position: absolute;
     top: clamp(3.625rem, 2.4167329093799683rem + 6.041335453100159vw, 6rem);
     left: clamp(3.3125rem, -2.410870429252782rem + 28.61685214626391vw, 14.5625rem);
-    @media (min-width: 950px) {
+    @media (min-width: 951px) {
             top: clamp(5.8125rem, 3.5940934065934065rem + 3.7362637362637363vw, 7.9375rem);
             left:0;
         }

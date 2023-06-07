@@ -5,16 +5,13 @@ section{
     display:flex;
     flex-direction: column;
     direction: relative;
+    overflow:hidden;
 }
 
 h2{
     margin-top: clamp(6.25rem, 3.009006550218341rem + 5.458515283842794vw, 9.375rem);
     margin-bottom:clamp(2.1875rem, 1.2152019650655022rem + 1.6375545851528384vw, 3.125rem);
-    // text-align: center;
-    // @media (min-width: 950px) {
-    //         text-align: end;
-    //      }   
-     
+ 
 
 }
 
@@ -39,6 +36,10 @@ img{
 .mobile-button-container{
     display: flex;
     justify-content: end;
+    margin-bottom:0.7rem;
+     @media (max-width: 458px) {
+        margin-top:82px;
+     }
 }
 
 
@@ -49,6 +50,8 @@ img{
     row-gap: 50px;
     justify-items: start;
     justify-content: start;
+    z-index:49;
+    margin-bottom:0.7rem;
      @media (max-width: 450px) {
         grid-template-columns: repeat(auto-fill, minmax(clamp(70px, 60.8571428571px + 2.8571428571vw, 88px), 1fr));
         gap: calc((100% - (3 * clamp(70px, 60.8571428571px + 2.8571428571vw, 88px))) / 2);
@@ -68,6 +71,21 @@ img{
   top: 50%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.background-sec3{
+    
+    position: absolute;
+    left: 0;
+    // top:53%;
+    bottom:0;
+    background-image: url('^assets/img/background/sec3blue.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 20;
+    width: clamp(200px, 173.68421052631578px + 8.223684210526317vw, 300px);
+    height: 600px;
+
 }
 
 
