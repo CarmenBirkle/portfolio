@@ -1,0 +1,22 @@
+<div class="main-container" 
+        *ngFor="let project of projects; let i = index"
+        [ngClass]="{ 'reverse': i % 2 !== 0 }">
+    <div class="image-container">
+        <img class="project-img" [src]="project.image" [alt]="project.title" />
+        <img class="project-img-hover" [src]="project.imageHover" [alt]="project.title" />
+    </div>
+    <div class="project-text">
+        <p class="title">{{ project.title }}</p>
+        <p class="subtitle">
+            <ng-container *ngFor="let skill of project.skills; let isLast=last">
+        {{ skill }}{{ isLast ? '' : ' | ' }}
+      </ng-container>
+        </p>
+        <p class="content">{{project.description}} </p>
+        <div class="button-container">
+            <button>Live test</button>
+            <button class="button-right">Github</button>
+        </div>
+    </div>
+   
+</div>

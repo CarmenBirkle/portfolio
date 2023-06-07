@@ -16,13 +16,14 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { SkillsComponent } from './skills/skills.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
+import { ProjectComponent } from './project/project.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
 }
 @NgModule({
-  declarations: [AppComponent, ImprintComponent, HeaderComponent, FooterComponent, PresentationComponent, MainComponent, AboutMeComponent, PortfolioComponent, ContactComponent, SkillsComponent, MobileNavComponent],
+  declarations: [AppComponent, ImprintComponent, HeaderComponent, FooterComponent, PresentationComponent, MainComponent, AboutMeComponent, PortfolioComponent, ContactComponent, SkillsComponent, MobileNavComponent, ProjectComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,96 @@
+@use 'src/styles' as g;
+
+.main-container{
+    padding: 0 10% 0 10%;
+    display: flex;
+    flex-direction: column;
+        @media (min-width: 950px) {
+            flex-direction: unset;
+        }
+}
+   
+.reverse{
+    @media (min-width: 950px) {
+            flex-direction: row-reverse;
+        }
+}
+
+.title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+    color:g.$dark-blue;
+    
+}
+
+.subtitle{
+    font-size: 23px;
+    line-height: 27.6px;
+    color: g.$blue;
+    padding: 0.9rem 0 0.9rem 0;
+  
+}
+
+.content{}
+
+img{
+    width:200px;
+    height:200px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.project-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .project-img-hover {
+  opacity: 1;
+}
+
+
+.button-container{
+display:flex;
+justify-content: space-evenly;
+    // gap:1rem;
+}
+
+button{
+    @media (max-width: 410px) {
+        padding: 15px 20px;
+     }    
+}
+
+.button-right{
+    
+    padding: 15px 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 10px;
+    border: 1px solid g.$blue;
+    font-size: clamp(1.125rem, 1.0427631579rem + 0.4111842105vw, 1.4375rem);
+    line-height: 120%;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top:44px;
+    &:hover{
+        background-color: g.$blue;
+       
+    transform: scaleX(1.1) scaleY(1.1);
+    
+}
+}

@@ -22,7 +22,7 @@ section{
 }
 
 .title::before {
-  left: 27%;
+  left: 12%; // ev. bis 27% nochmals testen
   margin-right: 30px; /* Abstand zwischen dem Strich und dem Text */
    width: 10%;
 }
@@ -32,3 +32,7 @@ section{
   margin-left: 30px; /* Abstand zwischen dem Strich und dem Text */
    width: 40%;
 }
+.subtitle{
+     padding: 0 10% 10% 10%;
+}
+
