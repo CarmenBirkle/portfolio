@@ -36,7 +36,7 @@ export const projectData = [
     ],
     image: 'assets/img/projects/portfolio.png',
     imageHover: 'assets/img/projects/portfolio2.png',
-    linkWebsite: 'htts://carmenbirkle.de',
+    linkWebsite: 'htts://www.carmenbirkle.de',
     linkGithub: 'https://github.com/CarmenBirkle/portfolio',
   },
   {
@@ -76,8 +76,8 @@ export const projectData = [
     ],
     image: 'assets/img/projects/el-pollo-loco.png',
     imageHover: 'assets/img/projects/el-pollo-loco2.png',
-    linkWebsite: 'https://carmen-birkle.developerakademie.net/join',
-    linkGithub: 'https://xxx/join',
+    linkWebsite: 'http://el-pollo-loco.carmenbirkle.de/',
+    linkGithub: 'https://github.com/CarmenBirkle/el-pollo-loco-game',
   },
   {
     title: 'Pokedex',

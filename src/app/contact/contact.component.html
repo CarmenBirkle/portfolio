@@ -1,1 +1,92 @@
-<section id="contact">contact works!</section>
+<section id="contact">
+      <div class="background-top"></div>
+    <h2 translate>Contact</h2>
+    <div class="information">
+        <p class="subtitle" translate>Got a problem to solve?</p>
+        <p translate>Please use this contact form to get in touch with me. I look forward to listening to you, learning about your ideas and contributing to your projects with my work. Your feedback and collaboration are very important to me.</p><br>
+        <p translate>Need a Frontend developer?<b translate>Contact me!</b></p>
+    </div>
+    <form action="">
+        <!-- <input required 
+                type="text" 
+                pattern=".*\S.*" 
+                required 
+                [placeholder]="'Your Name' | translate"
+                [(ngModel)]="inputValue" 
+                [ngClass]="{'empty-focus': inputValue === '' && isFocused}"> -->
+
+<input type="text" [(ngModel)]="name.value" 
+        
+        required
+        pattern=".*\S.*"
+        (focus)="onFocus(name)" 
+        (blur)="onBlur(name)"
+        [placeholder]="'Your Name' | translate"
+      
+       [ngModelOptions]="{standalone: true}">
+
+       <!-- <div class="error" [ngStyle]="{'visibility': message.value.trim() === '' && message.isFocused ? 'visible' : 'hidden'}" translate>
+  Your message is empty.
+</div> -->
+
+<div class="error-container">
+    <div class="error" *ngIf="name.value.trim() === '' && name.isFocused" translate>
+    Your name is required
+    </div>
+</div>
+
+
+<input type="email" [(ngModel)]="email.value" 
+       (focus)="onFocus(email)" 
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+       (blur)="onBlur(email)"
+       required
+       [placeholder]="'Your Email' | translate"
+       [ngModelOptions]="{standalone: true}">
+
+<div class="error-container">
+    <div class="error" *ngIf="email.value.trim() === '' && email.isFocused" translate>
+    Your email is required
+    </div>
+</div>
+
+
+<textarea [(ngModel)]="message.value" 
+           required
+          (focus)="onFocus(message)" 
+          (blur)="onBlur(message)"
+          [placeholder]="'Your Message' | translate"
+          [ngModelOptions]="{standalone: true}">
+</textarea>
+
+<div class="error-container">
+    <div class="error" *ngIf="message.value.trim() === '' && message.isFocused" translate>
+        Your message is empty.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+        <!-- <textarea required name="" id="" cols="30" rows="10" [placeholder]="'Your Message' | translate"></textarea> -->
+        <div class="btn-container">
+            <button translate>Send message</button>
+        </div>
+       
+    </form>
+
+
+
+
+    <div class="scroll">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path class="scroll-path" d="M11 7.828L6.34295 12.485C5.95249 12.8755 5.31942 12.8755 4.92895 12.485V12.485C4.53849 12.0945 4.53849 11.4615 4.92896 11.071L11.2928 4.70711C11.6834 4.31658 12.3165 4.31658 12.7071 4.70711L19.071 11.071C19.4614 11.4615 19.4614 12.0945 19.071 12.485V12.485C18.6805 12.8755 18.0474 12.8755 17.657 12.485L13 7.828L13 19C13 19.5523 12.5522 20 12 20V20C11.4477 20 11 19.5523 11 19L11 7.828Z" />
+  </svg>
+</div>
+
+    <div class="background-blue"></div>
+</section>

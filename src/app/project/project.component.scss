@@ -67,7 +67,6 @@ img{
   top: 0;
   left: 0;
   opacity: 0;
-
   transition: opacity 0.3s ease;
 }
 
@@ -86,7 +85,7 @@ justify-content: space-evenly;
 }
 
 button{
-    @media (min-width: 950px) and (max-width: 985px) {
+    @media (min-width: 950px) and (max-width: 1000px) {
         padding: 15px 19px;
     }
     @media (max-width: 410px) {
@@ -95,7 +94,6 @@ button{
 }
 
 .button-right{
-    
     padding: 15px 30px;
     background-color: transparent;
     border-radius: 10px;
@@ -116,5 +114,10 @@ button{
     &:hover{
         background-color: g.$blue;
         transform: scaleX(1.1) scaleY(1.1);
+    }
+     &:active{
+        background-color: white;
+        color: black;
+      ;
     }
 }

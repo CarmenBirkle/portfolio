@@ -1,0 +1,154 @@
+@use 'src/styles' as g;
+section{
+    padding: 0 10% 0 10%;
+    padding-top: 6.813rem; //252px lt. desktop figma
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    position: relative;
+    // overflow:hidden;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.subtitle{
+    font-weight: 700;
+    font-size:32px;
+    padding: 0 0 25px 0;
+}
+
+.scroll {
+  position: absolute;
+  right: 10%;
+  bottom: 100px;
+  border-radius: 50%;
+  border: solid 2px white;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+    @media (min-width: 300px) and (max-width: 500px) {
+        bottom: clamp(3.75rem, -0.6944444444444446rem + 22.222222222222225vw, 6.25rem);
+    }
+}
+
+.scroll:hover {
+  border: solid 2px g.$blue;
+}
+
+.scroll-path {
+  fill: white;
+  transition: fill 0.3s ease; 
+}
+
+.scroll:hover .scroll-path {
+  fill: g.$blue; 
+}
+
+.background-blue {
+    position: absolute;
+    left: 0;
+    bottom:0;
+    background-image: url('^assets/img/background/bg-blue-contact.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: clamp(18.75rem, 15.575396825396826rem + 15.873015873015872vw, 25rem);
+    height: clamp(12.5rem, 9.325396825396826rem + 15.873015873015872vw, 18.75rem);
+}
+
+
+.background-top{
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    z-index: 999;
+    width: 400px;
+    height: 1500px;
+
+
+    background-image: url('^assets/img/background/bg-sec-portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+form{
+    z-index:10;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+    margin-top:45px;
+    // position: relative;
+
+}
+
+input {
+            width: 100%;
+            border: 1px solid #4B47FF;
+            border-radius: 10px;
+            height: 50px;
+            padding: 15px 25px;
+            background: #141D2F;
+            color: white;
+            padding-right: 50px;
+            caret-color: white;
+        }
+
+
+textarea {
+            width: 100%;
+            width: 100%;
+            border: 1px solid #4B47FF;
+            border-radius: 10px;
+            height: 50px;
+            padding: 15px 25px;
+            padding-right: 50px;
+            background: #141D2F;
+            height: 202px;
+            color: white;
+            resize: none;
+        }
+
+input:hover,
+textarea:hover {
+        border-color: #00BEE8;
+        }
+
+input.ng-touched.ng-invalid,
+textarea.ng-touched.ng-invalid {
+    border-color: red;
+}
+
+input.ng-valid,
+textarea.ng-valid {
+    border-color: green;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+        color: transparent;
+}
+
+input:focus,
+textarea:focus {
+            background: #141D2F;
+            color: white;
+            border: 1px solid #E61C40;
+            outline: none;
+        }
+.error{
+    color: red;
+    font-size: 12px;
+}
+
+.error-container{
+    height: 13px;;
+}
+

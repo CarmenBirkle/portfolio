@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 import { ProjectComponent } from './project/project.component';
 
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -26,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [AppComponent, ImprintComponent, HeaderComponent, FooterComponent, PresentationComponent, MainComponent, AboutMeComponent, PortfolioComponent, ContactComponent, SkillsComponent, MobileNavComponent, ProjectComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({

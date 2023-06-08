@@ -1,4 +1,6 @@
+@use 'src/styles' as g;
+
 footer{
     height: 290px;
-    background-color: aquamarine;
+    border-top: 5px solid g.$blue;
 }

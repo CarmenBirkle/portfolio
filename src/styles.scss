@@ -25,6 +25,7 @@ html, body{
     line-height: 120%;
     font-size: 16px;
     font-weight: 400;
+    // overflow:hidden;
 }
 section {
     min-height: 100%;
@@ -125,8 +126,12 @@ button{
     margin-top:44px;
     &:hover{
         background-color: $dark-blue;
-       
-    transform: scaleX(1.1) scaleY(1.1);
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    &:active{
+        background-color: white;
+        color: black;
+      ;
     }
 }
 

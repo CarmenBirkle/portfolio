@@ -2,7 +2,7 @@
 
 section{
     overflow: hidden;
-
+    position: relative;
     padding-top: 6.813rem; //252px lt. desktop figma
 }
 
@@ -28,11 +28,21 @@ section{
 }
 
 .title::after {
-//   left: 0;
   margin-left: 30px; /* Abstand zwischen dem Strich und dem Text */
-   width: 40%;
+  width: 40%;
 }
 .subtitle{
      padding: 0 10% 0 10%;
 }
+
+// .background-blue{
+//     position: absolute;
+//     right: 0;
+//     bottom:0;
+//     background-image: url('^assets/img/background/bg-sec-portfolio.png');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     width: clamp(18.75rem, 15.575396825396826rem + 15.873015873015872vw, 25rem);
+//     height: clamp(12.5rem, 9.325396825396826rem + 15.873015873015872vw, 18.75rem);
+// }
 
