@@ -5,17 +5,21 @@
         <img class="project-img" [src]="project.image" [alt]="project.title" />
         <img class="project-img-hover" [src]="project.imageHover" [alt]="project.title" />
     </div>
-    <div class="project-text">
+    <div class="project-text" [ngClass]="{'reverse-text': i % 2 !== 0}">
         <p class="title">{{ project.title }}</p>
         <p class="subtitle">
             <ng-container *ngFor="let skill of project.skills; let isLast=last">
         {{ skill }}{{ isLast ? '' : ' | ' }}
       </ng-container>
         </p>
-        <p class="content">{{project.description}} </p>
+        <p class="content">{{ getDescriptionByLang(project) }} </p>
         <div class="button-container">
+        <a [href]="project.linkWebsite" target="_blank">
             <button>Live test</button>
+        </a>
+        <a [href]="project.linkGithub" target="_blank" >
             <button class="button-right">Github</button>
+        </a>
         </div>
     </div>
    

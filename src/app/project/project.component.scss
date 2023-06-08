@@ -4,8 +4,13 @@
     padding: 0 10% 0 10%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 6.25rem;
         @media (min-width: 950px) {
             flex-direction: unset;
+            align-items: unset;
+            gap:3.75rem
         }
 }
    
@@ -14,12 +19,28 @@
             flex-direction: row-reverse;
         }
 }
+.project-text{
+    @media (min-width: 950px) {
+        display:flex;
+        align-items: end;
+        flex-direction: column;
+        text-align: end;
+    }
+}
+
+.reverse-text{
+   @media (min-width: 950px) {
+     align-items: end;
+   }
+  
+}
 
 .title{
     font-weight: 700;
     font-size: 32px;
     line-height: 38.4px;
     color:g.$dark-blue;
+    margin-top: 0.9rem;
     
 }
 
@@ -31,15 +52,14 @@
   
 }
 
-.content{}
 
 img{
-    width:200px;
-    height:200px;
+    width: clamp(17.5rem, 12.228682170542635rem + 26.356589147286826vw, 28.125rem);
 }
 
 .image-container {
   position: relative;
+  width: clamp(17.5rem, 12.228682170542635rem + 26.356589147286826vw, 28.125rem);
 }
 
 .project-img-hover {
@@ -59,10 +79,16 @@ img{
 .button-container{
 display:flex;
 justify-content: space-evenly;
-    // gap:1rem;
+    @media (min-width: 950px) {
+      gap:1rem;
+    }
+    
 }
 
 button{
+    @media (min-width: 950px) and (max-width: 985px) {
+        padding: 15px 19px;
+    }
     @media (max-width: 410px) {
         padding: 15px 20px;
      }    
@@ -89,8 +115,6 @@ button{
     margin-top:44px;
     &:hover{
         background-color: g.$blue;
-       
-    transform: scaleX(1.1) scaleY(1.1);
-    
-}
+        transform: scaleX(1.1) scaleY(1.1);
+    }
 }

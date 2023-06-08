@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { projectData } from '../projektData';
+import { Component, OnInit } from '@angular/core';
+import { projectData } from '../projektData'; 
+import { PagesBehaviorService } from '../pages-behavior.service';
 
 @Component({
   selector: 'app-project',
@@ -7,15 +8,27 @@ import { projectData } from '../projektData';
   styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent {
-  projects = projectData;
+  constructor(private pagesBehaviorService: PagesBehaviorService) {}
 
-  isHovered: boolean[] = new Array(projectData.length).fill(false);
+  ngOnInit() {}
 
-  onMouseEnter(index: number) {
-    this.isHovered[index] = true;
+  getDescriptionByLang(project: any): string {
+    const lang = this.pagesBehaviorService.german ? 'de' : 'en';
+    console.log(lang);
+    const description = project.description.find(
+      (desc: any) => desc.lang === lang
+    );
+    return description ? description.value : '';
   }
+   projects = projectData;
 
-  onMouseLeave(index: number) {
-    this.isHovered[index] = false;
-  }
+  // isHovered: boolean[] = new Array(projectData.length).fill(false);
+
+  // onMouseEnter(index: number) {
+  //   this.isHovered[index] = true;
+  // }
+
+  // onMouseLeave(index: number) {
+  //   this.isHovered[index] = false;
+  // }
 }
