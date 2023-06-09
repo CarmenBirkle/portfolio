@@ -20,7 +20,9 @@ export class ContactComponent {
 
   inputValue: string = '';
 
-  onFocus(field: any) {
+
+
+  onFocus(field: any): void {
     field.isFocused = true;
   }
 
@@ -28,11 +30,22 @@ export class ContactComponent {
     field.isFocused = false;
   }
 
-  sendMail() {
+  async sendMail() {
     console.log('send mail');
     console.log(this.name.value, this.email.value, this.message.value);
     this.formSubmitted = true;
     // userfeedback und dann leeren und wieder auf false setzen ggf. mit timeout
+    //ladeanimation
+      let fd = new FormData();
+      fd.append('name', this.name.value);
+      fd.append('message', this.message.value);
+    await fetch(
+      'https://carmen-birkle.developerakademie.net/send_mail/send_mail.php',
+      {
+        method: 'POST',
+        body: fd
+      }
+    );
     this.name.value = '';
     this.email.value = '';
     this.message.value = '';
