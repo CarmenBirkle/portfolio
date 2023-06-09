@@ -31,5 +31,9 @@ export class ContactComponent {
    
     console.log('send mail');
     console.log(this.name.value, this.email.value, this.message.value);
+
+    this.name.value='';
+    this.email.value='';
+    this.message.value='';
   }
 }
