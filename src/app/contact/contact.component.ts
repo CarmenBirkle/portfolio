@@ -41,10 +41,10 @@ export class ContactComponent {
       fd.append('name', this.name.value);
       fd.append('message', combinedMessage);
     await fetch(
-      'https://carmen-birkle.developerakademie.net/send_mail/send_mail.php',
+       'https://carmen-birkle.developerakademie.net/send_mail/send_mail.php',
       {
         method: 'POST',
-        body: fd
+        body: fd,
       }
     );
     this.name.value = '';

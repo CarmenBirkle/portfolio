@@ -37,13 +37,16 @@ section{
 
 .background-blue{
     position: absolute;
-    left: -180px;
-    bottom:50%;
+    left: -5px;
+    top:35%;
     background-image: url('^assets/img/background/bg-blue-portfolio.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px;
-    width: 640px
+   
+    height:clamp(27.3125rem, 20.963293650793652rem + 31.746031746031743vw, 39.8125rem);
+     width: clamp(20.9375rem, 14.588293650793652rem + 31.746031746031743vw, 33.4375rem);
+     
+   
 }
 
 app-project{

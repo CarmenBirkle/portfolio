@@ -10,6 +10,26 @@ section{
     // overflow:hidden;
 }
 
+.title {
+  position: relative;
+  text-align: center;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+ 
+  height: 3px;
+  background-color: g.$dark-blue;
+}
+.title::before {
+  right: 110%; // ev. bis 27% nochmals testen
+//   margin-right: 30px; /* Abstand zwischen dem Strich und dem Text */
+   width: 69%
+}
+
+
 .btn-container{
     display: flex;
     justify-content: center;
@@ -25,7 +45,8 @@ button[disabled] {
 
 .subtitle{
     font-weight: 700;
-    font-size:32px;
+    font-size: 1.3125rem;
+    font-size: clamp(1.3125rem, 0.9632936507936508rem + 1.746031746031746vw, 2rem);
     padding: 0 0 25px 0;
 }
 
@@ -72,10 +93,13 @@ button[disabled] {
 .background-top{
     position: absolute;
     right: 0;
-    bottom: 50%;
-    z-index: 999;
-    width: 400px;
-    height: 1500px;
+    // bottom: 50%;
+    bottom: clamp(64%, 3vw, 50%);
+    z-index: 15;
+    // width: 400px;
+    width:clamp(20.25rem, 17.83730158730159rem + 12.063492063492063vw, 25rem);
+   // height: 1500px;
+   height: clamp(91.625rem, 90.54563492063492rem + 5.396825396825397vw, 93.75rem);
 
 
     background-image: url('^assets/img/background/bg-sec-portfolio.png');
