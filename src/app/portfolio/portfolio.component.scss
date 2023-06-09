@@ -35,14 +35,19 @@ section{
      padding: 0 10% 0 10%;
 }
 
-// .background-blue{
-//     position: absolute;
-//     right: 0;
-//     bottom:0;
-//     background-image: url('^assets/img/background/bg-sec-portfolio.png');
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     width: clamp(18.75rem, 15.575396825396826rem + 15.873015873015872vw, 25rem);
-//     height: clamp(12.5rem, 9.325396825396826rem + 15.873015873015872vw, 18.75rem);
-// }
+.background-blue{
+    position: absolute;
+    left: -180px;
+    bottom:50%;
+    background-image: url('^assets/img/background/bg-blue-portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 640px
+}
+
+app-project{
+  position: relative;
+  z-index: 5;
+}
 

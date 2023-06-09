@@ -15,6 +15,9 @@ section{
     justify-content: center;
     margin-bottom: 2rem;
 }
+button{
+    margin-top: unset;
+}
 
 .subtitle{
     font-weight: 700;
@@ -25,7 +28,7 @@ section{
 .scroll {
   position: absolute;
   right: 10%;
-  bottom: 100px;
+  bottom: 50px;
   border-radius: 50%;
   border: solid 2px white;
   padding: 5px;
