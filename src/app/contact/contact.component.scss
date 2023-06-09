@@ -18,6 +18,10 @@ section{
 button{
     margin-top: unset;
 }
+button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
 
 .subtitle{
     font-weight: 700;
@@ -139,8 +143,8 @@ textarea:focus::placeholder {
         color: transparent;
 }
 
-input:focus.ng-valid,
-textarea:focus.ng-valid {
+input:focus.ng-invalid,
+textarea:focus.ng-invalid {
             background: #141D2F;
             color: white;
             border: 1px solid green;
@@ -152,6 +156,14 @@ textarea:focus.ng-invalid {
             background: #141D2F;
             color: white;
             border: 1px solid #E61C40;
+            outline: none;
+        }
+
+input:focus.ng-valid,
+textarea:focus.ng-valid {
+            background: #141D2F;
+            color: white;
+            border: 1px solid green;
             outline: none;
         }
 
