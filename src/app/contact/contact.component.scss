@@ -35,9 +35,20 @@ section{
     justify-content: center;
     margin-bottom: 2rem;
 }
+
 button{
     margin-top: unset;
+        @media (min-width: 320px) and (max-width: 550px) {
+        padding-left: clamp(0.9375rem, -0.36684782608695654rem + 6.521739130434782vw, 1.875rem);
+        padding-right: clamp(0.9375rem, -0.36684782608695654rem + 6.521739130434782vw, 1.875rem);
+        }
+        @media (max-width: 320px)  {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        margin-bottom:5.625rem
+        }
 }
+
 button[disabled] {
   pointer-events: none;
   opacity: 0.5;
@@ -60,9 +71,7 @@ button[disabled] {
   cursor: pointer;
   display: flex;
   justify-content: center;
-    @media (min-width: 300px) and (max-width: 500px) {
-        bottom: clamp(3.75rem, -0.6944444444444446rem + 22.222222222222225vw, 6.25rem);
-    }
+
 }
 
 .scroll:hover {
