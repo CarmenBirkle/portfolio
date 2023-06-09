@@ -16,7 +16,8 @@
             (focus)="onFocus(name)" 
             (blur)="onBlur(name)"
             [placeholder]="'Your Name' | translate"
-            [ngModelOptions]="{standalone: true}">
+            [ngModelOptions]="{standalone: true}"
+            [disabled]="formSubmitted">
 
 
         <div class="error-container">
@@ -33,7 +34,8 @@
        (blur)="onBlur(email)"
        required
        [placeholder]="'Your Email' | translate"
-       [ngModelOptions]="{standalone: true}">
+       [ngModelOptions]="{standalone: true}"
+       [disabled]="formSubmitted">
 
         <div class="error-container">
             <div class="error" *ngIf="email.value.trim() === '' && email.isFocused" translate>
@@ -48,7 +50,8 @@
           (focus)="onFocus(message)" 
           (blur)="onBlur(message)"
           [placeholder]="'Your Message' | translate"
-          [ngModelOptions]="{standalone: true}">
+          [ngModelOptions]="{standalone: true}"
+          [disabled]="formSubmitted">
 </textarea>
 
         <div class="error-container">
@@ -58,7 +61,7 @@
         </div>
 
         <div class="btn-container">
-            <button   translate>Send message</button>
+            <button translate [disabled]="formSubmitted">Send message</button>
         </div>
        
     </form>

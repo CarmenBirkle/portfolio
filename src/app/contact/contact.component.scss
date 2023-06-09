@@ -18,6 +18,10 @@ section{
 button{
     margin-top: unset;
 }
+button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
 
 .subtitle{
     font-weight: 700;

@@ -16,6 +16,7 @@ export class ContactComponent {
   name = { value: '', isFocused: false };
   email = { value: '', isFocused: false };
   message = { value: '', isFocused: false };
+  formSubmitted = false;
 
   inputValue: string = '';
 
@@ -28,8 +29,8 @@ export class ContactComponent {
   }
 
   sendMail() {
-   
     console.log('send mail');
     console.log(this.name.value, this.email.value, this.message.value);
+    this.formSubmitted = true;
   }
 }
