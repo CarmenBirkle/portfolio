@@ -139,13 +139,22 @@ textarea:focus::placeholder {
         color: transparent;
 }
 
-input:focus,
-textarea:focus {
+input:focus.ng-invalid,
+textarea:focus.ng-invalid {
             background: #141D2F;
             color: white;
             border: 1px solid #E61C40;
             outline: none;
         }
+
+input:focus.ng-valid,
+textarea:focus.ng-valid {
+            background: #141D2F;
+            color: white;
+            border: 1px solid green;
+            outline: none;
+        }
+
 .error{
     color: red;
     font-size: 12px;

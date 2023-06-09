@@ -14,7 +14,6 @@ export class ProjectComponent {
 
   getDescriptionByLang(project: any): string {
     const lang = this.pagesBehaviorService.german ? 'de' : 'en';
-    console.log(lang);
     const description = project.description.find(
       (desc: any) => desc.lang === lang
     );
