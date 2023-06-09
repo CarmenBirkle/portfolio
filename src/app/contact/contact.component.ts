@@ -37,8 +37,9 @@ export class ContactComponent {
     // userfeedback und dann leeren und wieder auf false setzen ggf. mit timeout
     //ladeanimation
       let fd = new FormData();
+      let combinedMessage = `Name: ${this.name.value}\nEmail: ${this.email.value}\nMessage: ${this.message.value}`;
       fd.append('name', this.name.value);
-      fd.append('message', this.message.value);
+      fd.append('message', combinedMessage);
     await fetch(
       'https://carmen-birkle.developerakademie.net/send_mail/send_mail.php',
       {
