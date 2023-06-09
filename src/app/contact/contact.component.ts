@@ -32,5 +32,9 @@ export class ContactComponent {
     console.log('send mail');
     console.log(this.name.value, this.email.value, this.message.value);
     this.formSubmitted = true;
+    // userfeedback und dann leeren und wieder auf false setzen ggf. mit timeout
+    this.name.value = '';
+    this.email.value = '';
+    this.message.value = '';
   }
 }
