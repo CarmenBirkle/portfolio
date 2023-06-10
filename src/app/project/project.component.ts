@@ -20,14 +20,4 @@ export class ProjectComponent {
     return description ? description.value : '';
   }
    projects = projectData;
-
-  // isHovered: boolean[] = new Array(projectData.length).fill(false);
-
-  // onMouseEnter(index: number) {
-  //   this.isHovered[index] = true;
-  // }
-
-  // onMouseLeave(index: number) {
-  //   this.isHovered[index] = false;
-  // }
 }

@@ -36,7 +36,7 @@ export const projectData = [
     ],
     image: 'assets/img/projects/portfolio.png',
     imageHover: 'assets/img/projects/portfolio2.png',
-    linkWebsite: 'htts://www.carmenbirkle.de',
+    linkWebsite: 'https://www.carmenbirkle.de',
     linkGithub: 'https://github.com/CarmenBirkle/portfolio',
   },
   {

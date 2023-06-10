@@ -127,7 +127,9 @@ export class ContactComponent {
     this.email = { value: '', isFocused: false };
     this.message = { value: '', isFocused: false };
   }
-
+/**
+ * closes the submit process by removing the CSS class from the document body to enable scrolling and hiding the loading spinner.
+ */
   closeSubmit() {
     this.renderer.removeClass(document.body, 'no-scroll');
     this.isLoading = false;

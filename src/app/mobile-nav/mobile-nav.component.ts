@@ -14,11 +14,13 @@ export class MobileNavComponent {
 
   isMenuOpen = false;
 
+  /**
+   * Toggles the menu state between open and closed. Updates the isMenuOpen flag and adds or removes the 'no-scroll' class from the document body accordingly.
+   */
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    this.isMenuOpen ? this.renderer.addClass(document.body, 'no-scroll') 
-                    : this.renderer.removeClass(document.body, 'no-scroll');
+    this.isMenuOpen
+      ? this.renderer.addClass(document.body, 'no-scroll')
+      : this.renderer.removeClass(document.body, 'no-scroll');
   }
-
-  
 }

@@ -4,8 +4,6 @@ section{
     height: 100%;
     padding-top:80px; 
 }
-
-
       @media (min-width: 951px) {
         .main-container{
                 display: flex;
@@ -14,8 +12,6 @@ section{
                 align-items: center;
         }
     }
-
-
 
 .profile-container{
     position:relative
@@ -62,7 +58,6 @@ section{
     }
 }
 
-
 .intro{
     display: flex;
     position:relative;
@@ -88,8 +83,6 @@ section{
             font-size: 2.5rem;
             font-size: clamp(2.5rem, -29.166666666666668rem + 53.333333333333336vw, 3rem);
         }
-
-
     }
 
     h3{
@@ -168,7 +161,6 @@ section{
 }
     
 .line{
- 
     width: clamp(1.5625rem, 0.6101190476190477rem + 4.761904761904762vw, 3.4375rem);
     border: 3px solid g.$dark-blue;
     border-top-right-radius: 10px;
@@ -218,7 +210,6 @@ section{
 }
 
 @keyframes scroll-down-animation {
-
     0%,
     100% {
         transform: rotate(90deg) translateY(0);

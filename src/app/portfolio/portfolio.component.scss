@@ -3,7 +3,7 @@
 section{
     overflow: hidden;
     position: relative;
-    padding-top: 6.813rem; //252px lt. desktop figma
+    padding-top: 6.813rem; 
 }
 
 .title {
@@ -22,13 +22,13 @@ section{
 }
 
 .title::before {
-  left: 12%; // ev. bis 27% nochmals testen
-  margin-right: 30px; /* Abstand zwischen dem Strich und dem Text */
+  left: 12%; 
+  margin-right: 30px; 
    width: 10%;
 }
 
 .title::after {
-  margin-left: 30px; /* Abstand zwischen dem Strich und dem Text */
+  margin-left: 30px; 
   width: 40%;
 }
 .subtitle{
@@ -42,15 +42,12 @@ section{
     background-image: url('^assets/img/background/bg-blue-portfolio.png');
     background-repeat: no-repeat;
     background-size: cover;
-   
     height:clamp(27.3125rem, 20.963293650793652rem + 31.746031746031743vw, 39.8125rem);
-     width: clamp(20.9375rem, 14.588293650793652rem + 31.746031746031743vw, 33.4375rem);
-     
-   
+    width: clamp(20.9375rem, 14.588293650793652rem + 31.746031746031743vw, 33.4375rem);
 }
 
 app-project{
   position: relative;
-  z-index: 5;
+  z-index: 20;
 }
 
