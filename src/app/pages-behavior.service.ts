@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root',
@@ -9,15 +11,15 @@ export class PagesBehaviorService {
   language = 'EN';
   flagPicture = 'assets/img/icons/german.png';
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('en');
   }
 
-/**
- * Toggle language between english and german
- * change flag picture and the alt text
- */ 
+  /**
+   * Toggle language between english and german
+   * change flag picture and the alt text
+   */
   toggleLanguage() {
     this.german = !this.german;
     this.translate.use(this.german ? 'de' : 'en');
@@ -35,5 +37,16 @@ export class PagesBehaviorService {
       top: 0,
       left: 0,
     });
+  }
+
+  /**
+   * Handle logo click, if user is on imprint page, redirect to home page
+   */
+  handleLogoClick() {
+    if (this.router.url === '/imprint') {
+       this.router.navigateByUrl('/');
+    } else {
+       this.scrollToTop();
+    }
   }
 }

@@ -1,7 +1,7 @@
 <footer>
     <div class="logo-container">
         <img class="logo" (click)="pagesBehaviorService.scrollToTop()" src="assets/img/personal/logo.png" alt="Carmen Birkle">
-        <p class="imprint" translate>Imprint</p>
+        <p class="imprint" (click)="pagesBehaviorService.scrollToTop()" routerLink="/imprint" translate>Imprint</p>
     </div>
 <div>
     &#169; Carmen Birkle 2023
@@ -17,6 +17,6 @@
             <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
         </a>
     </div>
-<p class="imprint-mobile" translate>Imprint</p>
+<p class="imprint-mobile" (click)="pagesBehaviorService.scrollToTop()" routerLink="/imprint" translate>Imprint</p>
 
 </footer>

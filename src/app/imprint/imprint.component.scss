@@ -1,0 +1,95 @@
+@use 'src/styles' as g;
+section{
+    padding: 25% 10% 0 10%;
+    min-height: unset;
+    padding-bottom:4.375rem;
+    
+}
+
+h1{
+    margin-bottom: 3.125rem;
+}
+
+h4{
+    margin-bottom: 1.875rem;
+}
+.imprint{
+   position: relative;
+   z-index: 10;
+   text-align: start;
+   padding-top: 2.5rem;
+}
+
+.title {
+  position: relative;
+ 
+}
+
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  background-color: g.$dark-blue;
+}
+
+.title::before { 
+  right: 100%;
+  margin-right: clamp(0.625rem, -0.009920634920634885rem + 3.1746031746031744vw, 1.875rem);
+  width: 10%;
+}
+
+.title::after {
+  margin-left: clamp(0.625rem, -0.009920634920634885rem + 3.1746031746031744vw, 1.875rem);
+  width: 40%;
+}
+
+.adress{
+    margin: 1.875rem 0;
+}
+
+.references {
+    margin-top: 3.125rem;
+}
+
+.background-blue{
+    position: absolute;
+    left: -5px;
+    top:35%;
+    background-image: url('^assets/img/background/bg-blue-portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:clamp(23.3125rem, 20.963293650793652rem + 31.746031746031743vw, 32.8125rem);
+    width: clamp(20.9375rem, 14.588293650793652rem + 31.746031746031743vw, 33.4375rem);
+}
+
+.scroll {
+  position: absolute;
+  top:1.5px;
+  right:0;
+  border-radius: 50%;
+  border: solid 2px white;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  svg{
+      transform: rotate(-90deg);
+  }
+
+}
+
+.scroll:hover {
+  border: solid 2px g.$blue;
+}
+
+.scroll-path {
+  fill: white;
+  transition: fill 0.3s ease; 
+}
+
+.scroll:hover .scroll-path {
+  fill: g.$blue; 
+}

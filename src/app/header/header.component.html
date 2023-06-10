@@ -1,6 +1,6 @@
 <nav>
     <div>
-        <img class="logo" (click)="pagesBehaviorService.scrollToTop()" src="assets/img/personal/logo.png" alt="Carmen Birkle">
+        <img class="logo" (click)="pagesBehaviorService.handleLogoClick()" src="assets/img/personal/logo.png" alt="Carmen Birkle">
     </div>
     <div class="nav-left">
         <a [ngClass]="{'a-german': pagesBehaviorService.german}" href="#about" translate>About me</a>
