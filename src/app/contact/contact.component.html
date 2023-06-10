@@ -76,4 +76,35 @@
 </div>
 
     <div class="background-blue"></div>
+
+    <div id="loader" [class.hide]="!isLoading">
+        <div class="loading">
+        <div class="loading-text">
+            <span class="loading-text-words">L</span>
+            <span class="loading-text-words">O</span>
+            <span class="loading-text-words">A</span>
+            <span class="loading-text-words">D</span>
+            <span class="loading-text-words">I</span>
+            <span class="loading-text-words">N</span>
+            <span class="loading-text-words">G</span>
+         </div>
+        </div>
+    </div>
+
+    <div id="success" [class.hide]="!isSuccess" [class.fadeInBottomAlways]="isSuccess" >
+        <div class="success">
+            <div class="success-text">
+                <span class="success-text-words" translate>Message sent successfully</span>
+             </div>
+        </div>
+    </div>
+
+    <div id="error" [class.hide]="!isError" [class.fadeInBottomAlways]="isError" >
+        <div class="success">
+            <div class="success-text">
+                <span class="error-text-words" translate>message send failed - please try again later</span>
+             </div>
+        </div>
+    </div>
+
 </section>
