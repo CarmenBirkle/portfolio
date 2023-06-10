@@ -1,71 +1,74 @@
 <section id="contact">
       <div class="background-top"></div>
     <h2 class="title" translate>Contact</h2>
-    <div class="information">
-        <p class="subtitle" translate>Got a problem to solve?</p>
-        <p translate>Please use this contact form to get in touch with me. I look forward to listening to you, learning about your ideas and contributing to your projects with my work. Your feedback and collaboration are very important to me.</p><br>
-        <p translate>Need a Frontend developer?<b translate>Contact me!</b></p>
-    </div>
-    <form  action="" (submit)="sendMail()"  ngNativeValidate #myForm="ngForm">
-    
+    <div class="content-container">
+        <div class="information">
+            <p class="subtitle" translate>Got a problem to solve?</p>
+            <p translate>Please use this contact form to get in touch with me. I look forward to listening to you, learning about your ideas and contributing to your projects with my work. Your feedback and collaboration are very important to me.</p><br>
+            <p translate>Need a Frontend developer?<b translate>Contact me!</b></p>
+        </div>
+        <form  action="" (submit)="sendMail()"  ngNativeValidate #myForm="ngForm">
+        
 
-    <input type="text" [(ngModel)]="name.value" 
-            name="name" 
-            #nameField="ngModel"
-            required 
-            pattern=".*\S.*"
-            (focus)="onFocus(name)" 
-            (blur)="onBlur(name)"
-            [placeholder]="'Your Name' | translate"
+        <input type="text" [(ngModel)]="name.value" 
+                name="name" 
+                #nameField="ngModel"
+                required 
+                pattern=".*\S.*"
+                (focus)="onFocus(name)" 
+                (blur)="onBlur(name)"
+                [placeholder]="'Your Name' | translate"
+                [ngModelOptions]="{standalone: true}"
+                [disabled]="formSubmitted">
+
+
+            <div class="error-container">
+                <div class="error" *ngIf="name.value.trim() === '' && name.isFocused" translate>
+                Your name is required
+                </div>
+            </div>
+
+
+    <input type="email" [(ngModel)]="email.value" 
+        (focus)="onFocus(email)" 
+        #emailField="ngModel"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        (blur)="onBlur(email)"
+        required
+        [placeholder]="'Your Email' | translate"
+        [ngModelOptions]="{standalone: true}"
+        [disabled]="formSubmitted">
+
+            <div class="error-container">
+                <div class="error" *ngIf="email.value.trim() === '' && email.isFocused" translate>
+                Your email is required
+                </div>
+            </div>
+
+
+    <textarea [(ngModel)]="message.value" 
+            required
+            #messageField="ngModel"
+            (focus)="onFocus(message)" 
+            (blur)="onBlur(message)"
+            [placeholder]="'Your Message' | translate"
             [ngModelOptions]="{standalone: true}"
             [disabled]="formSubmitted">
+    </textarea>
 
-
-        <div class="error-container">
-            <div class="error" *ngIf="name.value.trim() === '' && name.isFocused" translate>
-            Your name is required
+            <div class="error-container">
+                <div class="error" *ngIf="message.value.trim() === '' && message.isFocused" translate>
+                    Your message is empty.
+                </div>
             </div>
-        </div>
 
-
-<input type="email" [(ngModel)]="email.value" 
-       (focus)="onFocus(email)" 
-       #emailField="ngModel"
-       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-       (blur)="onBlur(email)"
-       required
-       [placeholder]="'Your Email' | translate"
-       [ngModelOptions]="{standalone: true}"
-       [disabled]="formSubmitted">
-
-        <div class="error-container">
-            <div class="error" *ngIf="email.value.trim() === '' && email.isFocused" translate>
-            Your email is required
+            <div class="btn-container">
+                <button translate [disabled]="formSubmitted">Send message</button>
             </div>
-        </div>
+        
+        </form>
+    </div>
 
-
-<textarea [(ngModel)]="message.value" 
-          required
-          #messageField="ngModel"
-          (focus)="onFocus(message)" 
-          (blur)="onBlur(message)"
-          [placeholder]="'Your Message' | translate"
-          [ngModelOptions]="{standalone: true}"
-          [disabled]="formSubmitted">
-</textarea>
-
-        <div class="error-container">
-            <div class="error" *ngIf="message.value.trim() === '' && message.isFocused" translate>
-                Your message is empty.
-            </div>
-        </div>
-
-        <div class="btn-container">
-            <button translate [disabled]="formSubmitted">Send message</button>
-        </div>
-       
-    </form>
 
 
 

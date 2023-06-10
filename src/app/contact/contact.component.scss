@@ -10,6 +10,20 @@ section{
     position: relative;
 }
 
+.content-container{
+  @media (min-width: 950px) {
+      display:flex;
+      gap: clamp(3.125rem, -3.356986899563318rem + 10.917030567685588vw, 9.375rem);
+       
+    }  
+}
+
+.information{
+  @media (min-width: 950px) {
+       width:100%
+    }  
+}
+
 .title {
   position: relative;
   text-align: center;
@@ -58,6 +72,7 @@ button[disabled] {
     font-size: 1.3125rem;
     font-size: clamp(1.3125rem, 0.9632936507936508rem + 1.746031746031746vw, 2rem);
     padding: 0 0 25px 0;
+    line-height: 1.2;
 }
 
 .scroll {
