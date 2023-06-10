@@ -11,10 +11,10 @@ section{
 }
 
 .content-container{
+  z-index:10;
   @media (min-width: 950px) {
       display:flex;
       gap: clamp(3.125rem, -3.356986899563318rem + 10.917030567685588vw, 9.375rem);
-       
     }  
 }
 
