@@ -6,12 +6,23 @@ section{
     flex-direction: column;
     direction: relative;
     overflow:hidden;
+    @media (min-width: 950px) {
+        display: flex;
+        flex-direction: row-reverse;
+        gap:60px;
+     }
+
+
+
+
 }
 
 h2{
     margin-top: clamp(6.25rem, 3.009006550218341rem + 5.458515283842794vw, 9.375rem);
     margin-bottom:clamp(2.1875rem, 1.2152019650655022rem + 1.6375545851528384vw, 3.125rem);
- 
+    @media (min-width: 950px) {
+        padding-top:200px;
+    }   
 
 }
 
@@ -28,6 +39,32 @@ img{
         perspective: 1000px; 
         }
     }
+
+.title {
+  position: relative;
+  text-align: center;
+}
+
+.title::after {
+    display:none;
+    content: "";
+    top: 50%;
+    background-color: g.$dark-blue;
+    right: 110%; 
+    width: 70%;
+    height: 4px;
+    background-color: g.$dark-blue;
+    position: absolute;
+    left: 101%;
+    top: 83%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    @media (min-width: 950px) {
+        display:unset;
+    }
+}
+
+
 
 @keyframes shake {
         10%, 90% {
@@ -51,11 +88,19 @@ img{
 
 .skills-container{
     margin-bottom: 3.938rem;
-    text-align: end;;
+    text-align: end;
+    
+    @media (min-width: 950px) {
+        flex: 1;
+        width:40%
+    }
 }
 
 .button-desktop{
     display: none;
+    @media (min-width: 950px) {
+        display:unset;
+    }
 
 }
 
@@ -66,6 +111,9 @@ img{
      @media (max-width: 458px) {
         margin-top:82px;
      }
+     @media (min-width: 950px) {
+        display:none;
+    }
 }
 
 
@@ -81,7 +129,12 @@ img{
      @media (max-width: 450px) {
         grid-template-columns: repeat(auto-fill, minmax(clamp(70px, 60.8571428571px + 2.8571428571vw, 88px), 1fr));
         gap: calc((100% - (3 * clamp(70px, 60.8571428571px + 2.8571428571vw, 88px))) / 2);
-     }    
+     } 
+         @media (min-width: 950px) {
+            row-gap: 50px;
+            width:60%;
+            margin-top:150px;
+    }   
 }
 .line-container{
     position: relative;
@@ -97,6 +150,9 @@ img{
   top: 50%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  @media (min-width: 950px) {
+        display:none;
+    }
 }
 
 .background-sec3{
@@ -108,7 +164,7 @@ img{
     background-size: cover;
     z-index: 20;
     width: clamp(200px, 173.68421052631578px + 8.223684210526317vw, 300px);
-    height: 600px;
+    height: 700px;
 
 }
 

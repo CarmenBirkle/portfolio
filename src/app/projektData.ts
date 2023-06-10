@@ -19,26 +19,7 @@ export const projectData = [
     linkWebsite: 'https://carmen-birkle.developerakademie.net/join',
     linkGithub: 'https://github.com/CarmenBirkle/join',
   },
-  {
-    title: 'Portfolio',
-    skills: ['Angular', 'HTML', 'CSS'],
-    description: [
-      {
-        lang: 'de',
-        value:
-          'Meine Angular-basierte Portfolio-Website mit eigenen Werken und Projekten. Mit nahtloser Angular-Integration und modernem Design präsentiere ich übersichtlich Informationen zu meiner Person und meinem Portfolio. ',
-      },
-      {
-        lang: 'en',
-        value:
-          'My Angular-based portfolio website with my own works and projects. With seamless Angular integration and modern design, I clearly present information about myself and my portfolio. ',
-      },
-    ],
-    image: 'assets/img/projects/portfolio.png',
-    imageHover: 'assets/img/projects/portfolio2.png',
-    linkWebsite: 'https://www.carmenbirkle.de',
-    linkGithub: 'https://github.com/CarmenBirkle/portfolio',
-  },
+  
   {
     title: 'Ring of Fire',
     skills: ['Angular', 'Firebase', 'Material Design'],
@@ -56,7 +37,7 @@ export const projectData = [
     ],
     image: 'assets/img/projects/ring-of-fire.png',
     imageHover: 'assets/img/projects/ring-of-fire2.png',
-    linkWebsite: 'http://ring-of-fire.carmenbirkle.de/',
+    linkWebsite: 'https://ring-of-fire.carmenbirkle.de/',
     linkGithub: 'https://github.com/CarmenBirkle/ring-of-fire-firebase',
   },
   {
@@ -76,7 +57,7 @@ export const projectData = [
     ],
     image: 'assets/img/projects/el-pollo-loco.png',
     imageHover: 'assets/img/projects/el-pollo-loco2.png',
-    linkWebsite: 'http://el-pollo-loco.carmenbirkle.de/',
+    linkWebsite: 'https://el-pollo-loco.carmenbirkle.de/',
     linkGithub: 'https://github.com/CarmenBirkle/el-pollo-loco-game',
   },
   {

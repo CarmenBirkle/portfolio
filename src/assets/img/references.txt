@@ -4,3 +4,25 @@ english flag: <div> Icons made by <a href="https://www.freepik.com" title="Freep
 Bild ipad/PC etc. : Bild von <a href="https://pixabay.com/de/users/nick_h-1821910/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1999636">Nick</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1999636">Pixabay</a>
  mit hintergrund ev. schlechter: lappi einzeln: Bild von <a href="https://pixabay.com/de/users/nick_h-1821910/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1999633">Nick</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1999633">Pixabay</a>
  transparent lappi: Bild von <a href="https://pixabay.com/de/users/designstrive-14851609/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6306817">DesignStrive Boutique Creative Studio</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6306817">Pixabay</a>
+
+ data portfolio:
+ {
+    title: 'Portfolio',
+    skills: ['Angular', 'HTML', 'CSS'],
+    description: [
+      {
+        lang: 'de',
+        value:
+          'Meine Angular-basierte Portfolio-Website mit eigenen Werken und Projekten. Mit nahtloser Angular-Integration und modernem Design präsentiere ich übersichtlich Informationen zu meiner Person und meinem Portfolio. ',
+      },
+      {
+        lang: 'en',
+        value:
+          'My Angular-based portfolio website with my own works and projects. With seamless Angular integration and modern design, I clearly present information about myself and my portfolio. ',
+      },
+    ],
+    image: 'assets/img/projects/portfolio.png',
+    imageHover: 'assets/img/projects/portfolio2.png',
+    linkWebsite: 'https://www.carmenbirkle.de',
+    linkGithub: 'https://github.com/CarmenBirkle/portfolio',
+  },
