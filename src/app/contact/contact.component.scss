@@ -1,13 +1,13 @@
 @use 'src/styles' as g;
+
 section{
     padding: 0 10% 0 10%;
-    padding-top: 6.813rem; //252px lt. desktop figma
+    padding-top: 6.813rem; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
     position: relative;
-    // overflow:hidden;
 }
 
 .title {
@@ -19,13 +19,12 @@ section{
   content: "";
   position: absolute;
   top: 50%;
- 
   height: 3px;
   background-color: g.$dark-blue;
 }
+
 .title::before {
-  right: 110%; // ev. bis 27% nochmals testen
-//   margin-right: 30px; /* Abstand zwischen dem Strich und dem Text */
+   right: 110%; 
    width: 69%
 }
 
@@ -71,6 +70,7 @@ button[disabled] {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  z-index:20;
 
 }
 
@@ -102,15 +102,10 @@ button[disabled] {
 .background-top{
     position: absolute;
     right: 0;
-    // bottom: 50%;
     bottom: clamp(64%, 3vw, 50%);
     z-index: 15;
-    // width: 400px;
     width:clamp(20.25rem, 17.83730158730159rem + 12.063492063492063vw, 25rem);
-   // height: 1500px;
-   height: clamp(91.625rem, 90.54563492063492rem + 5.396825396825397vw, 93.75rem);
-
-
+    height: clamp(91.625rem, 90.54563492063492rem + 5.396825396825397vw, 93.75rem);
     background-image: url('^assets/img/background/bg-sec-portfolio.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,35 +120,33 @@ form{
     flex-direction: column;
     gap:15px;
     margin-top:45px;
-    // position: relative;
-
 }
 
 input {
-            width: 100%;
-            border: 1px solid #4B47FF;
-            border-radius: 10px;
-            height: 50px;
-            padding: 15px 25px;
-            background: #141D2F;
-            color: white;
-            padding-right: 50px;
-            caret-color: white;
-        }
+        width: 100%;
+        border: 1px solid #4B47FF;
+        border-radius: 10px;
+        height: 50px;
+        padding: 15px 25px;
+        background: #141D2F;
+        color: white;
+        padding-right: 50px;
+        caret-color: white;
+      }
 
 
 textarea {
-            width: 100%;
-            width: 100%;
-            border: 1px solid #4B47FF;
-            border-radius: 10px;
-            height: 50px;
-            padding: 15px 25px;
-            padding-right: 50px;
-            background: #141D2F;
-            height: 202px;
-            color: white;
-            resize: none;
+          width: 100%;
+          width: 100%;
+          border: 1px solid #4B47FF;
+          border-radius: 10px;
+          height: 50px;
+          padding: 15px 25px;
+          padding-right: 50px;
+          background: #141D2F;
+          height: 202px;
+          color: white;
+          resize: none;
         }
 
 input:hover,

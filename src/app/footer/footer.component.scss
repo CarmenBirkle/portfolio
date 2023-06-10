@@ -16,6 +16,8 @@ footer{
     }
 }
 
+
+
 .logo-container{
     display: flex;
     gap:10px;
@@ -34,6 +36,7 @@ footer{
 }
 
 .imprint{
+    cursor: pointer;
     @media(max-width: 950px) {
         display:none;
     }
@@ -43,14 +46,13 @@ footer{
     display: none;
     @media(max-width: 950px) {
         display:unset;
+        cursor: pointer;
     }
 }
 
 .imprint-mobile,
 .imprint{
-        // font-size: clamp(1.25rem, 1.1161rem + 0.3571vw, 1.4375rem);
         position:relative;
-      
         &:after {
             content: '';
             position: absolute;
