@@ -35,8 +35,17 @@
   "Copyright notice": "Urheberrechtliche Hinweise",
   "made by": "Erstellt von",
   "Language Icon": "Sprachensymbol",
-  "Laptop Shape:":"Laptop Form",
+  "Laptop Shape:": "Laptop Form",
   "The imprint was created with the": "Das Impressum wurde mit dem",
-  "Imprint generator of activeMind AG":"Impressums-Generator der activeMind AG",
-  "created.":"erstellt."
+  "Imprint generator of activeMind AG": "Impressums-Generator der activeMind AG",
+  "created.": "erstellt.",
+  "message send failed - please try again later": "Das senden der Nachricht ist fehlgeschlagen. Versuche es später erneut",
+  "Message sent successfully": "Nachricht erfolgreich gesendet",
+  "L": "-",
+  "O": "L",
+  "A": "A",
+  "D": "D",
+  "I": "E",
+  "N": "N",
+  "G": "-"
 }

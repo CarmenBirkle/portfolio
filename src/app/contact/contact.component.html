@@ -11,6 +11,7 @@
 
     <input type="text" [(ngModel)]="name.value" 
             name="name" 
+            #nameField="ngModel"
             required 
             pattern=".*\S.*"
             (focus)="onFocus(name)" 
@@ -29,7 +30,7 @@
 
 <input type="email" [(ngModel)]="email.value" 
        (focus)="onFocus(email)" 
-      
+       #emailField="ngModel"
        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
        (blur)="onBlur(email)"
        required
@@ -46,7 +47,7 @@
 
 <textarea [(ngModel)]="message.value" 
           required
-         
+          #messageField="ngModel"
           (focus)="onFocus(message)" 
           (blur)="onBlur(message)"
           [placeholder]="'Your Message' | translate"
@@ -80,13 +81,13 @@
     <div id="loader" [class.hide]="!isLoading">
         <div class="loading">
         <div class="loading-text">
-            <span class="loading-text-words">L</span>
-            <span class="loading-text-words">O</span>
-            <span class="loading-text-words">A</span>
-            <span class="loading-text-words">D</span>
-            <span class="loading-text-words">I</span>
-            <span class="loading-text-words">N</span>
-            <span class="loading-text-words">G</span>
+            <span class="loading-text-words" translate>L</span>
+            <span class="loading-text-words" translate>O</span>
+            <span class="loading-text-words" translate>A</span>
+            <span class="loading-text-words" translate>D</span>
+            <span class="loading-text-words" translate>I</span>
+            <span class="loading-text-words" translate>N</span>
+            <span class="loading-text-words" translate>G</span>
          </div>
         </div>
     </div>

@@ -1,13 +1,10 @@
 import {
   Component,
   Renderer2, 
-  ElementRef,
-  NgModule,
-
   ViewChild,
 } from '@angular/core';
 
-import { FormsModule, NgForm } from '@angular/forms'; 
+import { NgForm, NgModel} from '@angular/forms'; 
 import { PagesBehaviorService } from '../pages-behavior.service';
 
 @Component({
@@ -22,6 +19,9 @@ export class ContactComponent {
   ) {}
 
   @ViewChild('myForm') myForm!: NgForm;
+  @ViewChild('nameField') nameField!: NgModel;
+  @ViewChild('emailField') emailField!: NgModel;
+  @ViewChild('messageField') messageField!: NgModel;
 
   name = { value: '', isFocused: false };
   email = { value: '', isFocused: false };
@@ -41,18 +41,17 @@ export class ContactComponent {
     field.isFocused = false;
   }
 
+  /**
+   * Sends the mail by handling form submission, preparing data, making the sending call,
+   * and handling success and error scenarios.
+   *
+   * @returns {Promise<void>} A promise that resolves once the mail is sent.
+   */
+
   async sendMail() {
     try {
-      console.log('send mail');
-      console.log(this.name.value, this.email.value, this.message.value);
-      this.formSubmitted = true;
-      this.renderer.addClass(document.body, 'no-scroll');
-      this.isLoading = true;
-
-      let fd = new FormData();
-      let combinedMessage = `Name: ${this.name.value}\nEmail: ${this.email.value}\nMessage: ${this.message.value}`;
-      fd.append('name', this.name.value);
-      fd.append('message', combinedMessage);
+      this.handleSubmit();
+      let fd = this.prepareData();
       await fetch(
         'https://carmen-birkle.developerakademie.net/send_mail/send_mail.php',
         {
@@ -60,41 +59,79 @@ export class ContactComponent {
           body: fd,
         }
       );
-
-      // this.name.value = '';
-      // this.email.value = '';
-      // this.message.value = '';
-      this.isSuccess = true;
-      setTimeout(() => {
-        this.isSuccess = false;
-        this.resetForm();
-      }, 3000);
+      this.handleSuccessMessage();
     } catch (error) {
-      console.error('Error sending mail:', error);
-      this.isError = true;
-      setTimeout(() => {
-        this.isError = false;
-        this.resetForm();
-      }, 3000);
+      this.handleErrorMessage();
     } finally {
-      this.renderer.removeClass(document.body, 'no-scroll');
-      this.isLoading = false;
+      this.closeSubmit();
     }
   }
 
-  resetForm() {
-    this.myForm.resetForm(); // Zurücksetzen des Angular-Formulars
-    // this.name.value = ''; // Zurücksetzen des Namensfelds
-    // this.email.value = ''; // Zurücksetzen des E-Mail-Felds
-    // this.message.value = ''; // Zurücksetzen des Nachrichtenfelds
-    this.formSubmitted = false; // Zurücksetzen des Formulars
-    this.name = { value: '', isFocused: false }; // Zurücksetzen des Namensfelds
-    this.email = { value: '', isFocused: false }; // Zurücksetzen des E-Mail-Felds
-    this.message = { value: '', isFocused: false }; // Zurücksetzen des Nachrichtenfelds
-   
-  
-  }  
+  /**
+   * Handles the submission of the form by setting the formSubmitted flag to true,
+   * adding a CSS class to the document body to disable scrolling, and displaying a loading spinner.
+   */
+  handleSubmit() {
+    this.formSubmitted = true;
+    this.renderer.addClass(document.body, 'no-scroll');
+    this.isLoading = true;
+  }
 
+  /**
+   * Prepares the form data by creating a new FormData object and appending the name, email, and message values.
+   * Returns the FormData object.
+   * @returns {FormData} The prepared form data.
+   */
+  prepareData() {
+    let fd = new FormData();
+    let combinedMessage = `Name: ${this.name.value}\nEmail: ${this.email.value}\nMessage: ${this.message.value}`;
+    fd.append('name', this.name.value);
+    fd.append('message', combinedMessage);
+    return fd;
+  }
+
+  /**
+   * Handles the success message display by setting the isSuccess flag to true and scheduling a timeout to reset the form and hide the success message after a certain duration.
+   */
+  handleSuccessMessage() {
+    this.isSuccess = true;
+    setTimeout(() => {
+      this.isSuccess = false;
+      this.resetForm();
+    }, 3000);
+  }
+
+  /**
+   * Handles the error message display by setting the isError flag to true and scheduling a timeout to reset the form and hide the error message after a certain duration.
+   */
+  handleErrorMessage() {
+    this.isError = true;
+    setTimeout(() => {
+      this.isError = false;
+      this.resetForm();
+    }, 3000);
+  }
+
+  /**
+   * Resets the form and clears the form fields.
+   * Mark individual form fields as untuched
+   */
+  resetForm() {
+    this.myForm.resetForm();
+    this.nameField.control.markAsUntouched();
+    this.emailField.control.markAsUntouched();
+    this.messageField.control.markAsUntouched();
+
+    this.formSubmitted = false;
+    this.name = { value: '', isFocused: false };
+    this.email = { value: '', isFocused: false };
+    this.message = { value: '', isFocused: false };
+  }
+
+  closeSubmit() {
+    this.renderer.removeClass(document.body, 'no-scroll');
+    this.isLoading = false;
+  }
 }
 
 
